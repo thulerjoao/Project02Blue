@@ -41,6 +41,7 @@ while(novamente == 'sim' || novamente == 's' || novamente == 1){
         } else if(escolhaJogador == "pedra" && escolhaPc == "papel"){
             vitoriasPc += 1;
         } else if(escolhaJogador == "papel" && escolhaPc == "tesoura"){
+            vitoriasPc += 1;
         } else if(escolhaJogador == "tesoura" && escolhaPc == "pedra"){
             vitoriasPc += 1;
         }
