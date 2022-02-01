@@ -67,13 +67,10 @@ while(novamente == 'sim' || novamente == 's' || novamente == 1){
         console.log(`Empate nunca é o melhor resultado. Tente agora uma vitória!`);
     }else{
         console.log(`Uma pena que não tenha vencido. Mas você pode se redimir tentando de novo...`);
-}
+    }
     novamente = prompt(`Deseja jogar novamente? [s] ou [n]: `).toLowerCase();
     while(novamente != 'sim' && novamente != 's' && novamente != 1 
             && novamente != 'não' && novamente != 'nao'&& novamente != 'n' && novamente != 0){
         novamente = prompt(`Entrada inválida. Digite [s] ou [n]`).toLowerCase();
-    }
-       
-}
-
-    
+    }     
+} 
