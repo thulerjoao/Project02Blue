@@ -29,7 +29,6 @@ while(novamente == 'sim' || novamente == 's' || novamente == 1){
       escolhaJogador = prompt(`Rodada ${i+1} - Faça sua escolha: `).toLowerCase();    
       while(escolhaJogador != "pedra" && escolhaJogador != "papel" && escolhaJogador != "tesoura"){
            escolhaJogador = prompt(`Entrada inválida. Escolha entre [pedra] [papel] [tesoura]:`).toLowerCase();
-          console.log(escolhaJogador);
        }
       escolhaPc = variaveis[parseInt(random(3))];
     
@@ -42,7 +41,6 @@ while(novamente == 'sim' || novamente == 's' || novamente == 1){
         } else if(escolhaJogador == "pedra" && escolhaPc == "papel"){
             vitoriasPc += 1;
         } else if(escolhaJogador == "papel" && escolhaPc == "tesoura"){
-            vitoriasPc += 1;
         } else if(escolhaJogador == "tesoura" && escolhaPc == "pedra"){
             vitoriasPc += 1;
         }
