@@ -46,14 +46,12 @@ while(novamente == 'sim' || novamente == 's' || novamente == 1){
         } else if(escolhaJogador == "tesoura" && escolhaPc == "pedra"){
             vitoriasPc += 1;
         }
-    
         console.clear();
         console.log(`Você jogou ${escolhaJogador.toUpperCase()} e o computador ${escolhaPc.toUpperCase()}.`);
         
         if(escolhaJogador == escolhaPc){     
             console.log(`A rodada empatou e o placar continua igual:`);
         }
-
         if(vitoriasJogador>vitoriasPc){
             console.log(`Você VENCE por ${vitoriasJogador} X ${vitoriasPc} \n`);
         }else if(vitoriasJogador<vitoriasPc){
