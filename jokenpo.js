@@ -11,7 +11,7 @@ let escolhaPc;
 let novamente = 1;
 
 console.log(`*** Jokenpô ***`);
-console.log(`O jogo é simples. A cada rodada, opte por [pedra], [papel] ou [tesoura] e conte com a sorte para vencer seu oponente virtual. \n`);
+console.log(`O jogo é simples. A cada rodada, opte por [pedra], [papel] ou [tesoura] e então, conte com a sorte para vencer seu oponente virtual. \n`);
 
 while(novamente == 'sim' || novamente == 's' || novamente == 1){ 
     
@@ -20,18 +20,21 @@ while(novamente == 'sim' || novamente == 's' || novamente == 1){
 
     nRodadas = parseInt(prompt(`Quantas rodadas você quer fazer? `));
         while(nRodadas < 1 || isNaN(nRodadas)){
-            nRodadas = parseInt(prompt(`Digite um número maior que 0: `));
+            console.clear();
+            nRodadas = parseInt(prompt(`Digite um número maior que 0 para quantidade de rodadas: `));
             console.clear();
         }
         console.clear();
-        console.log(`Teremos ${nRodadas} rodadas! `);
-
+        console.log(`Teremos ${nRodadas} rodada(s)! \n`);
     for(i=0; i < nRodadas; i++){
-      escolhaJogador = prompt(`Rodada ${i+1} - Faça sua escolha: `).toLowerCase();    
-      while(escolhaJogador != "pedra" && escolhaJogador != "papel" && escolhaJogador != "tesoura"){
-           escolhaJogador = prompt(`Entrada inválida. Escolha entre [pedra] [papel] [tesoura]:`).toLowerCase();
-       }
-      escolhaPc = variaveis[parseInt(random(3))];
+        escolhaJogador = prompt(`Rodada ${i+1} - Faça sua escolha: `).toLowerCase();           
+        while(escolhaJogador != "pedra" && escolhaJogador != "papel" && escolhaJogador != "tesoura"){
+            console.clear();
+            escolhaJogador = prompt(`Entrada inválida. Escolha entre [pedra] [papel] [tesoura]:`).toLowerCase();
+            console.clear();
+        }
+        
+        escolhaPc = variaveis[parseInt(random(3))];
     
         if(escolhaJogador == "pedra" && escolhaPc == "tesoura"){
             vitoriasJogador += 1;
@@ -47,6 +50,7 @@ while(novamente == 'sim' || novamente == 's' || novamente == 1){
             vitoriasPc += 1;
         }
         console.clear();
+        console.log(`Rodada ${i+1} - \n`);
         console.log(`Você jogou ${escolhaJogador.toUpperCase()} e o computador ${escolhaPc.toUpperCase()}.`);
         
         if(escolhaJogador == escolhaPc){     
@@ -67,8 +71,11 @@ while(novamente == 'sim' || novamente == 's' || novamente == 1){
         console.log(`Uma pena que não tenha vencido. Mas você pode se redimir tentando de novo...`);
     }
     novamente = prompt(`Deseja jogar novamente? [s] ou [n]: `).toLowerCase();
+    console.clear();
     while(novamente != 'sim' && novamente != 's' && novamente != 1 
             && novamente != 'não' && novamente != 'nao'&& novamente != 'n' && novamente != 0){
+        console.clear();
         novamente = prompt(`Entrada inválida. Digite [s] ou [n]`).toLowerCase();
+        console.clear();
     }     
 } 
