@@ -21,6 +21,7 @@ while(novamente == 'sim' || novamente == 's' || novamente == 1){
     nRodadas = parseInt(prompt(`Quantas rodadas você quer fazer? `));
         while(nRodadas < 1 || isNaN(nRodadas)){
             console.clear();
+            console.log(`!!! ATENÇÃO !!!\n`);
             nRodadas = parseInt(prompt(`Digite um número maior que 0 para quantidade de rodadas: `));
             console.clear();
         }
@@ -30,7 +31,8 @@ while(novamente == 'sim' || novamente == 's' || novamente == 1){
         escolhaJogador = prompt(`Rodada ${i+1} - Faça sua escolha: `).toLowerCase();           
         while(escolhaJogador != "pedra" && escolhaJogador != "papel" && escolhaJogador != "tesoura"){
             console.clear();
-            escolhaJogador = prompt(`Entrada inválida. Escolha entre [pedra] [papel] [tesoura]:`).toLowerCase();
+            console.log(`!!! ATENÇÃO !!!\n`);
+            escolhaJogador = prompt(`Entrada inválida. Escolha entre [pedra] [papel] [tesoura]: `).toLowerCase();
             console.clear();
         }
         
@@ -75,7 +77,8 @@ while(novamente == 'sim' || novamente == 's' || novamente == 1){
     while(novamente != 'sim' && novamente != 's' && novamente != 1 
             && novamente != 'não' && novamente != 'nao'&& novamente != 'n' && novamente != 0){
         console.clear();
-        novamente = prompt(`Entrada inválida. Digite [s] ou [n]`).toLowerCase();
+        console.log(`!!! ATENÇÃO !!! \n`);
+        novamente = prompt(`Entrada inválida. Digite [s] para recomeçar ou [n] para finalizar: `).toLowerCase();
         console.clear();
     }     
 } 
