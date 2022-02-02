@@ -19,8 +19,9 @@ while(novamente == 'sim' || novamente == 's' || novamente == 1){
     vitoriasPc = 0;
 
     nRodadas = parseInt(prompt(`Quantas rodadas você quer fazer? `));
-        while(nRodadas < 1){
-            nRodadas = parseInt(prompt(`Digite um número de rodadas maior que 0: `));
+        while(nRodadas < 1 || isNaN(nRodadas)){
+            nRodadas = parseInt(prompt(`Digite um número maior que 0: `));
+            console.clear();
         }
         console.clear();
         console.log(`Teremos ${nRodadas} rodadas! `);
